@@ -1,0 +1,188 @@
+body{
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    color: #313A51;
+    
+}
+
+@media (max-width: 600px){
+    .container{
+        margin: 0 auto;
+        height: 100vh;
+    }
+
+    .header{
+        display: flex;
+        justify-content: space-evenly;
+        background-color: #F5F5FA;
+        padding: 2em 0;
+        align-items: center;
+    }
+
+    .contact-search{
+        font-size: 1.2em;
+        padding: .3em;
+        border-radius: 100px;
+        border: 1px solid #fff;
+        outline: none;
+    }
+
+    .big-icons{
+        font-size: 1.5em;
+    }
+
+    .contact-name{
+        font-size: 1.2em;
+    }
+
+    ul{
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+
+    hr{
+        border: 2px solid #F5F5FA;;
+    }
+
+    .list_item{
+        list-style: none;
+    }
+
+    .relationship{
+        width: 6em;
+        text-align: center;
+        padding: .4em .5em;
+        border-radius: 100px;
+        border-top-left-radius: 0;
+        background-color: #F5F5FA;
+        font-size: .8em;
+    }
+
+    .contact-section{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 1.5em;
+        transition: 0.3s;
+    }
+
+    .text{
+        padding-left: 1em;
+    } 
+
+    .box-three{
+        width: 95px;
+        height: 95px;
+        position: fixed;
+        left: 50%;
+        top: 88%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        background-color: #F5F5FA;
+        box-shadow: 1px 1px 1px #919191,
+                 1px 2px 1px #919191,
+                 1px 3px 1px #919191,
+                 1px 4px 1px #919191,
+                 1px 5px 1px #919191;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+     }
+ 
+     .box-three .circle{
+         display: flex;
+        justify-content: center;
+        align-items: center;
+         width: 80px;
+         height: 80px;
+         background: linear-gradient(to top left,red, yellow);
+         border-radius: 50%;
+     }
+     
+     .box-three .circle a{
+         text-decoration: none;
+         color: white;
+         font-weight: 900;
+         font-style: normal;
+         font-size: 120;
+     }
+ 
+
+    .box-four{
+        position: fixed;
+        left: 50%;
+        top: 94%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 95%;
+        background-color: #F5F5FA;
+        padding-top: 9px;
+        padding-bottom: 3px;
+        border-radius: 20px;
+    }
+
+    .box-four .icons{
+        font-size: 25px;
+    }
+
+    .box-four .home a{
+        text-decoration: none;
+        font-weight: 900;
+        font-style: normal;
+        font-size: 120;
+        color: #313A51;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+    .box-four .contacts a{
+        text-decoration: none;
+        font-weight: 900;
+        font-style: normal;
+        font-size: 120;
+        color: #FF8852;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .box-four .settings a{
+        text-decoration: none;
+        font-weight: 900;
+        font-style: normal;
+        font-size: 120;
+        color: #313A51;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .box-four .profile a{
+        text-decoration: none;
+        font-weight: 900;
+        font-style: normal;
+        font-size: 120;
+        color: #313A51;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    a{
+        text-decoration: none;
+        color: #313A51;
+    }
+
+
+}

@@ -1,0 +1,71 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacts</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'contact.css' %}">
+    <script src="https://kit.fontawesome.com/b9a37c08a7.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <form class="search-bar">
+                <input type="search-name" class="contact-search" name="search-area" placeholder="Search">
+                <!-- <i onclick="document.getElementById('search-form').submit()"></i> -->
+            </form>
+
+            <a href="{% url 'add-contact' %}">
+                <i class="fas fa-plus-circle add big-icons"></i>
+            </a>
+        </header>
+
+        <section class="contacts-library">
+            <ul class="contacts-list">
+                {% for contact in contacts reversed %}
+                <a href="{% url 'profile' contact.id %}">
+                    <div class="contact-section">
+                        <li class="list_item">
+                            <p class="contact-name">{{ contact.full_name | title}}</p>
+                            <p class="relationship">{{ contact.relationship | title}}</p>
+                        </li>
+                        <li class="list_item">
+                            <i class="fas fa-phone big-icons"></i>
+                            <i class="fas fa-sms text big-icons"></i>
+                        </li>
+                    </div>
+                 </a>
+
+                <hr>
+                {% endfor %}
+
+            </ul>
+        </section>
+        
+        <div class="box-three">
+            <div class="circle"><a href="tel:112">SOS</a></div>
+        </div>
+
+        <div class="box-four">
+            <div class="home">
+                <a href="{% url 'index' %}">
+                    <div class="icons iconhome"><i class="fa-solid fa-house"></i></div>
+                    <div class="hometext"><p>Home</p></div>
+                </a>
+            </div>
+            <div class="contacts">
+                <a href="contact.html">
+                    <div class="icons iconcontact"><i class="fa-solid fa-address-book"></i></div>
+                    <div class="conttext"><p>Contacts</p></div>
+                </a>
+            </div>
+            
+        </div>
+    </div>
+</body>
+</html>

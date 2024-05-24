@@ -1,0 +1,64 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact profile page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'contactprofile.css' %}">
+    <script src="https://kit.fontawesome.com/b9a37c08a7.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+
+        <header class="hero">
+            <a href="{% url 'main-contact' %}">
+                <i class="fas fa-arrow-circle-left back-btn"></i>
+            </a>
+
+            <div class="hero-info">
+                <h1 class="name">{{ contact.full_name | title }}</h1>
+                <p class="relationship">{{ contact.relationship | title }}</p>
+            </div>
+        </header>
+
+        <section class="contact-info">
+
+            <div class="info-line">
+                <i class="fas fa-phone icon-gradient"></i>
+                <p class="phone-number">{{ contact.phone_number }}</p>
+            </div>
+
+            <div class="info-line">
+                <i class="fas fa-sms text icon-gradient"></i>
+                <p class="sms">Send a message</p>
+            </div>
+
+
+            <div class="info-line">
+                <i class="fas fa-envelope icon-gradient"></i>
+                <p class="email">{{ contact.email }}</p>
+            </div>
+
+            <div class="info-line">
+                <i id="location" class="fas fa-map-marker-alt icon-gradient"></i>
+                <p class="address">{{ contact.address }}</p>
+            </div>
+        </section>
+
+        <section class="button-container">
+            <a href="{% url 'edit-contact' contact.id %}">
+                <div class="update-contact">
+                    <i class="fa fa-gear icon-gradient"></i>
+                    <button class="button">Edit Contact</button>
+                </div>
+            </a>
+        </section>
+
+    </div>
+</body>
+</html>

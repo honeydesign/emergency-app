@@ -1,0 +1,112 @@
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    color:  #313A51;
+    
+}
+
+@media (max-width: 600px){
+    .container{
+        margin: 0 auto;
+        height: 100vh;
+    }
+
+    .hero{
+        background-color: #F5F5FA;
+        padding: 2em 0;
+    }
+
+    .back-btn{
+        font-size: 1.7em;
+        padding-left: 1em;
+    }
+
+    .hero-info{
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+    }
+
+    i{
+        font-size: 1.5em;
+        color: #313A51;
+    }
+
+    .relationship{
+        width: 6em;
+        text-align: center;
+        padding: .4em .5em;
+        border-radius: 100px;
+        border-top-left-radius: 0;
+        background-color: #F5F5FA;
+        font-size: .8em;
+    }
+
+    a{
+        text-decoration: none;
+        color: #fff;
+    }
+
+    .contact-info{
+        padding: 3em 1.5em;
+    }
+
+    .info-line{
+        display: flex;
+        width: 90%;
+        margin: 0 auto;
+        align-items: center;
+        padding: 1em 2em;
+        margin-top: 2em;
+        border-radius: 20px;
+        box-shadow: 6px 6px 12px #f5f5fa,
+                -6px -6px 12px #313A51;
+
+    }
+
+    p{
+        margin: 0;
+        padding-left: 2em;
+    }
+
+    .icon-gradient{
+        background-color: #F5F5FA;
+        border-radius: 100px;
+        padding: .5em;
+    }
+
+    #location{
+        padding: .5em .6em;
+    }
+
+    .button-container{
+        padding: 2em 3.5em;
+    }
+
+    .update-contact{
+        display: flex;
+        width: 90%;
+        margin: 0 auto;
+        align-items: center;
+        padding: 1em 2em;
+        border-radius: 20px;
+        box-shadow: 6px 6px 12px #f5f5fa,
+        -6px -6px 12px #313A51; ;
+    }
+
+    .button{
+        border: none;
+        font-size: 1.3em;
+        padding-left: 1.5em;
+        outline: none;
+        color: black;
+        background-color: #fff;
+    }
+
+
+
+}

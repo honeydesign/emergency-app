@@ -1,0 +1,103 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergency and disaster app</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'index.css' %}">
+    <script src="https://kit.fontawesome.com/b9a37c08a7.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="box-one">
+            <div class="text-part">
+                <div class="title-one">
+                    <h2>Are you in an Emergency?</h2>
+                </div>
+                <div class="note-one"><p>Press the SOS button, your live location will be shared with the nearest help centre and your emergency contacts.</p></div>
+            </div>
+            <div class="image-part"><img src="{% static 'images/emergencyimage.jpg' %}" alt="a woman being kidnapped"></div>
+        </div>
+
+        <div class="box-two">
+            <div class="text"><h3>What's your Emergency?</h3></div>
+            <div class="small-buttons">
+                <div class="fire">
+                    <a href="{% url 'form-details' %}">
+                        <div class="iconone"><i class="fa-solid fa-fire"></i></div>
+                        <div class="text-one"><p>Fire</p></div>
+                        <div class="greaterthan"><i class="fa-solid fa-greater-than"></i></div>
+                    </a>
+                    
+                </div>
+                <div class="accident">
+                    <a href="accident.html">
+                        <div class="icontwo"><i class="fa-solid fa-car-burst"></i></div>
+                        <div class="text-two"><p>Accident</p></div>
+                        <div class="greaterthan"><i class="fa-solid fa-greater-than"></i></div>
+                    </a>
+                </div>
+                <div class="medical">
+                    <a href="medical.html">
+                        <div class="iconthree"><i class="fa-solid fa-house-medical"></i></div>
+                        <div class="text-three"><p>Medical</p></div>
+                        <div class="greaterthan"><i class="fa-solid fa-greater-than"></i></div>
+                    </a>
+                    
+                </div>
+                <div class="rescue">
+                    <a href="rescue.html">
+                        <div class="iconfour"><i class="fa-solid fa-fire-extinguisher"></i></div>
+                        <div class="text-four"><p>Rescue</p></div>
+                        <div class="greaterthan"><i class="fa-solid fa-greater-than"></i></div>
+                    </a>
+                    
+                </div>
+                <div class="disaster">
+                    <a href="disaster.html">
+                        <div class="iconfive"><i class="fa-solid fa-tornado"></i></div>
+                        <div class="text-five"><p>Disaster</p></div>
+                        <div class="greaterthan"><i class="fa-solid fa-greater-than"></i></div>
+                    </a>
+                    
+                </div>
+                <div class="violence">
+                    <a href="violence.html">
+                        <div class="iconsix"><i class="fa-solid fa-person-burst"></i></div>
+                        <div class="text-six"><p>Violence</p></div>
+                        <div class="greaterthan"><i class="fa-solid fa-greater-than"></i></div>
+                    </a>
+            
+                </div>
+            </div>
+        </div>
+
+        <div class="box-three">
+            <div class="circle"><a href="tel:112">SOS</a></div>
+        </div>
+
+        <div class="box-four">
+            <div class="home">
+                <a href="home.html">
+                    <div class="icons iconhome"><i class="fa-solid fa-house"></i></div>
+                    <div class="hometext"><p>Home</p></div>
+                </a>
+            </div>
+            <div class="contacts">
+                <a href="{% url 'main-contact' %}">
+                    <div class="icons iconcontact"><i class="fa-solid fa-address-book"></i></div>
+                    <div class="conttext"><p>Contacts</p></div>
+                </a>
+            </div>
+        </div>
+
+        <div class="box-five">
+        </div>
+    </div>
+</body>
+</html>
